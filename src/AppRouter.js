@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import { Home } from "./views";
+import { Students } from "./views";
 
 const AppRouter = () => (
   <BrowserRouter>
-    <Route path="/" component={Home} />
+    <Route path="/" component={Students} />
   </BrowserRouter>
 );
 
