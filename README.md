@@ -2,7 +2,7 @@
 
 ## What's inside it?
 
-- [React Strap](https://reactstrap.github.io/) - React components for faster and easier web development
+- [Reactstrap](https://reactstrap.github.io/) - React components for faster and easier web development
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces
 - [React Hot Loader](https://github.com/gaearon/react-hot-loader) - Tweak React components in real time
 - [Redux](https://redux.js.org) - A predictable state container for JavaScript apps
@@ -14,7 +14,7 @@
 - Clone this repository: `git clone https://github.com/viniciusgc/react-school.git`
 - Install dependencies: `yarn install`
 - Run `yarn start` to develop on `http://localhost:3000`
-- Run `npx json-server --watch db.json --port 8000` to read jsons
+- Run `npx json-server --watch db.json --port 8000` to run api
 
 ## Scripts
 
@@ -26,4 +26,4 @@
 
 ## License
 
-- [MIT](https://github.com/rafaelsevla/react-wars/blob/master/LICENSE) © [Rafael Costa](https://github.com/rafaelsevla)
+- [MIT](https://github.com/rafaelsevla/react-wars/blob/master/LICENSE) © [Vinícius Guellis](https://github.com/viniciusgc)
