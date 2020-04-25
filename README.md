@@ -26,4 +26,4 @@
 
 ## License
 
-- [MIT](https://github.com/rafaelsevla/viniciusgc/blob/master/LICENSE) © [Vinícius Guellis](https://github.com/viniciusgc)
+- [MIT](https://github.com/viniciusgc/react-school/blob/master/LICENSE) © [Vinícius Guellis](https://github.com/viniciusgc)
