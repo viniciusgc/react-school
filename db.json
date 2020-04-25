@@ -17,6 +17,18 @@
       "name": "3° ano do ensino médio"
     },
     {
+      "id": 5,
+      "name": "Cursinho"
+    },
+    {
+      "id": 6,
+      "name": "Estudo em casa"
+    },
+    {
+      "id": 7,
+      "name": "Outros"
+    },
+    {
       "id": 8,
       "name": "4º ano do ensino fundamental"
     },
@@ -39,18 +51,6 @@
     {
       "id": 13,
       "name": "9º ano do ensino fundamental"
-    },
-    {
-      "id": 5,
-      "name": "Cursinho"
-    },
-    {
-      "id": 6,
-      "name": "Estudo em casa"
-    },
-    {
-      "id": 7,
-      "name": "Outros"
     }
   ],
   "classes": [
@@ -77,6 +77,50 @@
     {
       "id": 6,
       "name": "F"
+    }
+  ],
+  "matters": [
+    {
+      "id": 1,
+      "name": "Matemática"
+    },
+    {
+      "id": 2,
+      "name": "Português"
+    },
+    {
+      "id": 3,
+      "name": "História"
+    },
+    {
+      "id": 4,
+      "name": "Geografia"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Professor 1"
+    },
+    {
+      "id": 2,
+      "name": "Professor 2"
+    },
+    {
+      "id": 3,
+      "name": "Professor 3"
+    },
+    {
+      "id": 4,
+      "name": "Professor 4"
+    },
+    {
+      "id": 5,
+      "name": "Professor 5"
+    },
+    {
+      "id": 6,
+      "name": "Professor 6"
     }
   ],
   "students": [
@@ -114,6 +158,639 @@
       "name": "Nome do aluno 5",
       "degreeId": 6,
       "classId": "4"
+    },
+    {
+      "ra": 869130,
+      "name": "Nome do aluno 6",
+      "degreeId": 4,
+      "classId": 3,
+      "id": 6
+    },
+    {
+      "ra": 436574,
+      "name": "Nome do aluno 7",
+      "degreeId": 4,
+      "classId": 1,
+      "id": 7
+    },
+    {
+      "ra": 778617,
+      "name": "Nome do aluno 8",
+      "degreeId": 9,
+      "classId": 2,
+      "id": 8
+    },
+    {
+      "ra": 947847,
+      "name": "Nome do aluno 11",
+      "degreeId": 2,
+      "classId": 3,
+      "id": 9
+    },
+    {
+      "ra": 599727,
+      "name": "Nome do aluno 9",
+      "degreeId": 6,
+      "classId": 6,
+      "id": 10
+    },
+    {
+      "ra": 162329,
+      "name": "Nome do aluno 12",
+      "degreeId": 7,
+      "classId": 1,
+      "id": 11
+    },
+    {
+      "ra": 693251,
+      "name": "Nome do aluno 13",
+      "degreeId": 9,
+      "classId": 2,
+      "id": 12
+    },
+    {
+      "ra": 513491,
+      "name": "Nome do aluno 14",
+      "degreeId": 2,
+      "classId": 1,
+      "id": 13
+    },
+    {
+      "ra": 329547,
+      "name": "Nome do aluno 15",
+      "degreeId": 2,
+      "classId": 6,
+      "id": 14
+    },
+    {
+      "ra": 853373,
+      "name": "Nome do aluno 16",
+      "degreeId": 12,
+      "classId": 2,
+      "id": 15
+    },
+    {
+      "ra": 139047,
+      "name": "Nome do aluno 18",
+      "degreeId": 9,
+      "classId": 6,
+      "id": 16
+    },
+    {
+      "ra": 715537,
+      "name": "Nome do aluno 17",
+      "degreeId": 3,
+      "classId": 4,
+      "id": 17
+    },
+    {
+      "ra": 767203,
+      "name": "Nome do aluno 19",
+      "degreeId": 13,
+      "classId": 5,
+      "id": 18
+    },
+    {
+      "ra": 612234,
+      "name": "Nome do aluno 20",
+      "degreeId": 12,
+      "classId": 3,
+      "id": 19
+    },
+    {
+      "ra": 886752,
+      "name": "Nome do aluno 21",
+      "degreeId": 1,
+      "classId": 6,
+      "id": 20
+    },
+    {
+      "ra": 929671,
+      "name": "Nome do aluno 22",
+      "degreeId": 12,
+      "classId": 3,
+      "id": 21
+    },
+    {
+      "ra": 495862,
+      "name": "Nome do aluno 23",
+      "degreeId": 13,
+      "classId": 1,
+      "id": 22
+    },
+    {
+      "ra": 898798,
+      "name": "Nome do aluno 24",
+      "degreeId": 1,
+      "classId": 1,
+      "id": 23
+    },
+    {
+      "ra": 946388,
+      "name": "Nome do aluno 25",
+      "degreeId": 10,
+      "classId": 5,
+      "id": 24
+    },
+    {
+      "ra": 164163,
+      "name": "Nome do aluno 27",
+      "degreeId": 8,
+      "classId": 5,
+      "id": 25
+    },
+    {
+      "ra": 994271,
+      "name": "Nome do aluno 26",
+      "degreeId": 2,
+      "classId": 1,
+      "id": 26
+    },
+    {
+      "ra": 680392,
+      "name": "Nome do aluno 29",
+      "degreeId": 13,
+      "classId": 3,
+      "id": 27
+    },
+    {
+      "ra": 282205,
+      "name": "Nome do aluno 30",
+      "degreeId": 11,
+      "classId": 2,
+      "id": 28
+    },
+    {
+      "ra": 224400,
+      "name": "Nome do aluno 28",
+      "degreeId": 1,
+      "classId": 2,
+      "id": 29
+    },
+    {
+      "ra": 142765,
+      "name": "Nome do aluno 31",
+      "degreeId": 4,
+      "classId": 1,
+      "id": 30
+    },
+    {
+      "ra": 325302,
+      "name": "Nome do aluno 33",
+      "degreeId": 4,
+      "classId": 3,
+      "id": 31
+    },
+    {
+      "ra": 676175,
+      "name": "Nome do aluno 32",
+      "degreeId": 6,
+      "classId": 5,
+      "id": 32
+    },
+    {
+      "ra": 125001,
+      "name": "Nome do aluno 34",
+      "degreeId": 5,
+      "classId": 2,
+      "id": 33
+    },
+    {
+      "ra": 909822,
+      "name": "Nome do aluno 35",
+      "degreeId": 12,
+      "classId": 1,
+      "id": 34
+    },
+    {
+      "ra": 663274,
+      "name": "Nome do aluno 37",
+      "degreeId": 11,
+      "classId": 4,
+      "id": 35
+    },
+    {
+      "ra": 446746,
+      "name": "Nome do aluno 36",
+      "degreeId": 4,
+      "classId": 5,
+      "id": 36
+    },
+    {
+      "ra": 371268,
+      "name": "Nome do aluno 38",
+      "degreeId": 5,
+      "classId": 2,
+      "id": 37
+    },
+    {
+      "ra": 224751,
+      "name": "Nome do aluno 39",
+      "degreeId": 12,
+      "classId": 6,
+      "id": 38
+    },
+    {
+      "ra": 527491,
+      "name": "Nome do aluno 40",
+      "degreeId": 4,
+      "classId": 5,
+      "id": 39
+    },
+    {
+      "ra": 774412,
+      "name": "Nome do aluno 41",
+      "degreeId": 2,
+      "classId": 3,
+      "id": 40
+    },
+    {
+      "ra": 363909,
+      "name": "Nome do aluno 42",
+      "degreeId": 13,
+      "classId": 1,
+      "id": 41
+    },
+    {
+      "ra": 583741,
+      "name": "Nome do aluno 44",
+      "degreeId": 5,
+      "classId": 1,
+      "id": 42
+    },
+    {
+      "ra": 922049,
+      "name": "Nome do aluno 43",
+      "degreeId": 9,
+      "classId": 5,
+      "id": 43
+    },
+    {
+      "ra": 123260,
+      "name": "Nome do aluno 45",
+      "degreeId": 7,
+      "classId": 3,
+      "id": 44
+    },
+    {
+      "ra": 561969,
+      "name": "Nome do aluno 46",
+      "degreeId": 13,
+      "classId": 5,
+      "id": 45
+    },
+    {
+      "ra": 977809,
+      "name": "Nome do aluno 48",
+      "degreeId": 1,
+      "classId": 4,
+      "id": 46
+    },
+    {
+      "ra": 669076,
+      "name": "Nome do aluno 47",
+      "degreeId": 2,
+      "classId": 5,
+      "id": 47
+    },
+    {
+      "ra": 918000,
+      "name": "Nome do aluno 49",
+      "degreeId": 3,
+      "classId": 4,
+      "id": 48
+    },
+    {
+      "ra": 433596,
+      "name": "Nome do aluno 50",
+      "degreeId": 1,
+      "classId": 6,
+      "id": 49
+    },
+    {
+      "ra": 836694,
+      "name": "Nome do aluno 51",
+      "degreeId": 9,
+      "classId": 6,
+      "id": 50
+    },
+    {
+      "ra": 805723,
+      "name": "Nome do aluno 52",
+      "degreeId": 10,
+      "classId": 5,
+      "id": 51
+    },
+    {
+      "ra": 357598,
+      "name": "Nome do aluno 53",
+      "degreeId": 12,
+      "classId": 1,
+      "id": 52
+    },
+    {
+      "ra": 232615,
+      "name": "Nome do aluno 54",
+      "degreeId": 13,
+      "classId": 3,
+      "id": 53
+    },
+    {
+      "ra": 716754,
+      "name": "Nome do aluno 55",
+      "degreeId": 13,
+      "classId": 2,
+      "id": 54
+    },
+    {
+      "ra": 290024,
+      "name": "Nome do aluno 10",
+      "degreeId": 5,
+      "classId": 1,
+      "id": 55
+    },
+    {
+      "ra": 853373,
+      "name": "Nome do aluno 16",
+      "degreeId": 12,
+      "classId": 2,
+      "id": 56
+    },
+    {
+      "ra": 298375,
+      "name": "Nome do aluno 57",
+      "degreeId": 12,
+      "classId": 2,
+      "id": 57
+    },
+    {
+      "ra": 633538,
+      "name": "Nome do aluno 58",
+      "degreeId": 2,
+      "classId": 2,
+      "id": 58
+    },
+    {
+      "ra": 597783,
+      "name": "Nome do aluno 62",
+      "degreeId": 6,
+      "classId": 1,
+      "id": 59
+    },
+    {
+      "ra": 338986,
+      "name": "Nome do aluno 63",
+      "degreeId": 12,
+      "classId": 4,
+      "id": 60
+    },
+    {
+      "ra": 945087,
+      "name": "Nome do aluno 65",
+      "degreeId": 5,
+      "classId": 2,
+      "id": 61
+    },
+    {
+      "ra": 459178,
+      "name": "Nome do aluno 66",
+      "degreeId": 1,
+      "classId": 1,
+      "id": 62
+    },
+    {
+      "ra": 722771,
+      "name": "Nome do aluno 67",
+      "degreeId": 6,
+      "classId": 2,
+      "id": 63
+    },
+    {
+      "ra": 863194,
+      "name": "Nome do aluno 64",
+      "degreeId": 12,
+      "classId": 6,
+      "id": 64
+    },
+    {
+      "ra": 712555,
+      "name": "Nome do aluno 69",
+      "degreeId": 12,
+      "classId": 2,
+      "id": 65
+    },
+    {
+      "ra": 831839,
+      "name": "Nome do aluno 68",
+      "degreeId": 13,
+      "classId": 6,
+      "id": 66
+    },
+    {
+      "ra": 141761,
+      "name": "Nome do aluno 71",
+      "degreeId": 6,
+      "classId": 5,
+      "id": 67
+    },
+    {
+      "ra": 355453,
+      "name": "Nome do aluno 77",
+      "degreeId": 12,
+      "classId": 1,
+      "id": 68
+    },
+    {
+      "ra": 578988,
+      "name": "Nome do aluno 76",
+      "degreeId": 10,
+      "classId": 1,
+      "id": 69
+    },
+    {
+      "ra": 749737,
+      "name": "Nome do aluno 78",
+      "degreeId": 11,
+      "classId": 6,
+      "id": 70
+    },
+    {
+      "ra": 350379,
+      "name": "Nome do aluno 79",
+      "degreeId": 1,
+      "classId": 3,
+      "id": 71
+    },
+    {
+      "ra": 823416,
+      "name": "Nome do aluno 80",
+      "degreeId": 11,
+      "classId": 4,
+      "id": 72
+    },
+    {
+      "ra": 261389,
+      "name": "Nome do aluno 81",
+      "degreeId": 13,
+      "classId": 3,
+      "id": 73
+    },
+    {
+      "ra": 178009,
+      "name": "Nome do aluno 82",
+      "degreeId": 1,
+      "classId": 4,
+      "id": 74
+    },
+    {
+      "ra": 124965,
+      "name": "Nome do aluno 83",
+      "degreeId": 5,
+      "classId": 5,
+      "id": 75
+    }
+  ],
+  "relationships": [
+    {
+      "id": 1,
+      "teacherId": 1,
+      "matterId": 1,
+      "degrees": [
+        {
+          "degreeId": 1,
+          "classes": [
+            {
+              "classId": 1
+            },
+            {
+              "classId": 2
+            },
+            {
+              "classId": 3
+            }
+          ]
+        },
+        {
+          "degreeId": 2,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "teacherId": 2,
+      "matterId": 2,
+      "degrees": [
+        {
+          "degreeId": 8,
+          "classes": [
+            {
+              "classId": 1
+            },
+            {
+              "classId": 2
+            }
+          ]
+        },
+        {
+          "degreeId": 9,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "teacherId": 3,
+      "matterId": 3,
+      "degrees": [
+        {
+          "degreeId": 12,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 13,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 5,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 6,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "teacherId": 4,
+      "matterId": 4,
+      "degrees": [
+        {
+          "degreeId": 1,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 2,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 3,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 4,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 5,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        }
+      ]
     }
   ]
 }

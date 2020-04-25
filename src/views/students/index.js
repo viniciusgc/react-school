@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  Row,
-  Col,
-  FormGroup,
-  Input,
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-} from "reactstrap";
+import { Row, Col, FormGroup, Input, Button } from "reactstrap";
 import Layout from "../container/Layout";
 import { Table, Alert } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,9 +22,11 @@ class Students extends Component {
     name: "",
     classSelected: null,
     degrees: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    classes: [1, 2, 3, 4, 5, 6],
     classId: null,
     degreeId: null,
     modalShow: false,
+    chartOpts: [],
     options: {
       chart: {
         id: "basic-bar",
@@ -45,22 +37,22 @@ class Students extends Component {
           "1º EM",
           "2º EM",
           "3º EM",
+          "Cursinho",
+          "Em Casa",
+          "Outros ",
           "4º EF",
           "5º EF",
           "6º EF",
           "7º EF",
           "8º EF",
           "9º EF",
-          "Cursinho",
-          "Em Casa",
-          "Outros ",
         ],
       },
     },
     series: [
       {
         name: "series-1",
-        data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        data: [],
       },
     ],
   };
@@ -69,16 +61,26 @@ class Students extends Component {
     await this.props.fetchStudents();
     await this.props.fetchClasses();
     await this.props.fetchDegrees();
-
-    // let xaxis = { categories: this.props.degrees.map((degree) => degree.name) };
-    // this.setState((prevState) => ({
-    //   options: { ...prevState.options, xaxis },
-    // }));
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   console.log(nextProps.students);
-  // }
+  componentWillReceiveProps(nextProps) {
+    this.renderChartOptions(nextProps);
+  }
+
+  renderChartOptions = ({ students }) => {
+    let chartOpts = [];
+    for (let index = 1; index <= 13; index++) {
+      chartOpts.push(students.filter((data) => data.degreeId == index).length);
+    }
+    let series = [
+      {
+        name: "series-1",
+        data: chartOpts,
+      },
+    ];
+
+    this.setState({ series });
+  };
 
   toggle = () => {
     this.setState((prevState) => ({
@@ -107,14 +109,13 @@ class Students extends Component {
     this.props.fetchStudents(searchs);
   };
 
-  handleGenerateStudent = () => {
+  handleGenerateStudent = async () => {
     const { degrees, classes } = this.state;
-    for (let index = 1; index <= 5; index++) {
+    for (let index = 1; index <= 20; index++) {
       const { students } = this.props;
       let data = {
-        id: students.length + 1,
         ra: Math.floor(Math.random() * 900000) + 100000,
-        name: `Nome do aluno ${students.length + 1}`,
+        name: `Nome do aluno ${students.length + index}`,
         degreeId: degrees[Math.floor(Math.random() * degrees.length)],
         classId: classes[Math.floor(Math.random() * classes.length)],
       };
@@ -224,7 +225,7 @@ class Students extends Component {
       </Row>
       <Row className="mt-3">
         <Col md={12}>
-          <Table responsive>
+          <Table responsive hover>
             <thead>
               <tr>
                 <th width="30%">Nome</th>
@@ -249,7 +250,7 @@ class Students extends Component {
       <Layout>
         <Row className="mt-5">
           <Col md={12}>
-            <h2 className="title">Painel do aluno</h2>
+            <h1 className="title">Painel do aluno</h1>
           </Col>
         </Row>
         <Row className="mt-5">

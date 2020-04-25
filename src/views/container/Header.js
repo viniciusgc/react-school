@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Container,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -8,11 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
 } from "reactstrap";
 import "./style.scss";
 import logo from "../../assets/img/brand/logo-evolucional.png";
@@ -24,19 +18,6 @@ const Header = (props) => {
 
   return (
     <div>
-      {/* <Navbar expand="md" className="main-nav">
-        <NavbarBrand href="/">
-          <img src={logo} className="main-logo" />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem active={window.location.pathname.indexOf("/") >= 0}>
-              <NavLink href="/">Alunos</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar> */}
       <Navbar light expand="md" className="main-nav">
         <NavbarBrand href="/">
           <img src={logo} className="main-logo" />
@@ -45,7 +26,7 @@ const Header = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem
-              active={window.location.pathname.indexOf("/") >= 0}
+              active={window.location.pathname == "/"}
               className="nav-item"
             >
               <NavLink href="/" className="nav-link">
@@ -53,10 +34,10 @@ const Header = (props) => {
               </NavLink>
             </NavItem>
             <NavItem
-              active={window.location.pathname.indexOf("/teachers") >= 0}
+              active={window.location.pathname == "/teachers"}
               className="nav-item"
             >
-              <NavLink href="/" className="nav-link">
+              <NavLink href="/teachers" className="nav-link">
                 Professores
               </NavLink>
             </NavItem>

@@ -6,7 +6,13 @@ body {
     background-color: #fff;
     padding-bottom: 0px;
     .main-logo {
-      max-width: 235px;
+      @media only screen and (max-width: 320px) {
+        max-width: 200px;
+      }
+
+      @media only screen and (min-width: 321px) {
+        max-width: 235px;
+      }
     }
     .nav-item {
       font-weight: 700;
@@ -30,6 +36,15 @@ body {
     &:hover {
       background-color: #1667b2 !important;
       border-color: #1667b2;
+    }
+  }
+  .btn-outline-primary {
+    color: $primary !important;
+    border-color: $primary;
+    &:hover {
+      background-color: $primary !important;
+      border-color: #1667b2;
+      color: white !important;
     }
   }
 }
