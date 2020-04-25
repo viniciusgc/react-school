@@ -4,7 +4,12 @@ import Layout from "../container/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faEye } from "@fortawesome/free-solid-svg-icons";
 import { Row, Col, FormGroup, Input, Button, Table, Alert } from "reactstrap";
-import { fetchTeachers } from "./actions";
+import {
+  fetchTeachers,
+  fetchRelationships,
+  fetchMatters,
+  createRelationship,
+} from "./actions";
 import { fetchDegrees, fetchClasses, fetchStudents } from "../students/actions";
 import { ModalStudents, ModalTeachers } from "../../components";
 import "./styles.scss";
@@ -19,7 +24,9 @@ class Teachers extends Component {
 
   async componentDidMount() {
     await this.props.fetchTeachers();
+    await this.props.fetchRelationships();
     await this.props.fetchClasses();
+    await this.props.fetchMatters();
   }
 
   toggleStudents = () => {
@@ -131,8 +138,21 @@ class Teachers extends Component {
     this.toggleTeachers();
   };
 
+  createRelationship = async (teacherId, matterId, degrees) => {
+    let data = { teacherId, matterId, degrees };
+    await this.props.createRelationship(data);
+    this.toggleTeachers();
+  };
+
   render() {
-    const { teachers, degrees, classes, students } = this.props;
+    const {
+      teachers,
+      degrees,
+      classes,
+      students,
+      matters,
+      teachersSimple,
+    } = this.props;
     const { modalStudents, modalTeachers, degreeName } = this.state;
     return (
       <Layout>
@@ -209,6 +229,12 @@ class Teachers extends Component {
         <ModalTeachers
           isOpen={modalTeachers}
           toggle={() => this.toggleTeachers()}
+          degrees={degrees}
+          matters={matters}
+          teachers={teachersSimple}
+          handleForm={({ teacherId, matterId, degrees }) =>
+            this.createRelationship(teacherId, matterId, degrees)
+          }
         />
       </Layout>
     );
@@ -226,9 +252,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   fetchTeachers,
+  fetchRelationships,
   fetchDegrees,
   fetchClasses,
   fetchStudents,
+  fetchMatters,
+  createRelationship,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Teachers);

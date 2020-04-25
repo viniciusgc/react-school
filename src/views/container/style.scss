@@ -37,10 +37,14 @@ body {
       background-color: #1667b2 !important;
       border-color: #1667b2;
     }
+    &:disabled {
+      background-color: rgb(170, 170, 170) !important;
+      border-color: rgb(170, 170, 170);
+      color: white !important;
+    }
   }
   .btn-outline-primary {
     color: $primary !important;
-    border-color: $primary;
     &:hover {
       background-color: $primary !important;
       border-color: #1667b2;

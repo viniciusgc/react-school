@@ -4,4 +4,6 @@ export const API = {
   CLASSES: "classes/",
   DEGREES: "degrees/",
   RELATIONSHIPS: "relationships/",
+  MATTERS: "matters/",
+  TEACHERS: "teachers/",
 };

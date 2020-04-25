@@ -127,7 +127,7 @@
     {
       "id": 1,
       "ra": 12346,
-      "name": "Nome do aluno 1",
+      "name": "Nome do aluno 100",
       "degreeId": 1,
       "classId": "1"
     },
@@ -791,6 +791,43 @@
           ]
         }
       ]
+    },
+    {
+      "teacherId": "5",
+      "matterId": "1",
+      "degrees": [
+        {
+          "degreeId": 1,
+          "classes": [
+            {
+              "classId": 1
+            }
+          ]
+        },
+        {
+          "degreeId": 2,
+          "classes": [
+            {
+              "classId": 2
+            }
+          ]
+        },
+        {
+          "degreeId": 3,
+          "classes": [
+            {
+              "classId": 1
+            },
+            {
+              "classId": 5
+            },
+            {
+              "classId": 6
+            }
+          ]
+        }
+      ],
+      "id": 5
     }
   ]
 }

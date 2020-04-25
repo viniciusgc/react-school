@@ -52,7 +52,14 @@ class ModalUpdateStudents extends Component {
           </Row>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.props.update}>
+          <Button
+            color="primary"
+            onClick={this.props.update}
+            disabled={
+              !this.props.name ||
+              this.props.classSelected == "Selecione uma classe"
+            }
+          >
             Atualizar
           </Button>{" "}
         </ModalFooter>
