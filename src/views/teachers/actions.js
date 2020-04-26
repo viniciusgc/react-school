@@ -3,9 +3,13 @@ import qs from "qs";
 import { API } from "../../constants";
 import { ActionTypes as types } from "./constants";
 
-export const fetchRelationships = () => (dispatch) => {
+export const fetchRelationships = (search) => (dispatch) => {
+  const queryString = search
+    ? `?${qs.stringify(search)}&_expand=teacher&_expand=matter`
+    : "?_expand=teacher&_expand=matter";
+
   client
-    .get(`${API.RELATIONSHIPS}?_expand=teacher&_expand=matter`)
+    .get(`${API.RELATIONSHIPS}${queryString}`)
     .then((response) => {
       dispatch({
         type: types.FETCH_RELANTIONSHIPS,

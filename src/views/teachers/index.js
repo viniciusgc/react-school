@@ -20,6 +20,9 @@ class Teachers extends Component {
     degreeName: null,
     modalStudents: false,
     ModalTeachers: false,
+    degreeIdSearch: null,
+    classId: null,
+    teachers: [],
   };
 
   async componentDidMount() {
@@ -27,6 +30,11 @@ class Teachers extends Component {
     await this.props.fetchRelationships();
     await this.props.fetchClasses();
     await this.props.fetchMatters();
+    this.setState({ teachers: this.props.teachers });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ teachers: nextProps.teachers });
   }
 
   toggleStudents = () => {
@@ -144,16 +152,22 @@ class Teachers extends Component {
     this.toggleTeachers();
   };
 
+  handleDegreeSearch = (degreeIdSearch) => {
+    const { teachers } = this.state;
+    if (degreeIdSearch == "") {
+      this.setState({ teachers: this.props.teachers });
+      return;
+    }
+
+    let newArr = teachers.filter((item) =>
+      item.degrees.find((fd) => fd.degreeId == degreeIdSearch)
+    );
+    this.setState({ teachers: newArr });
+  };
+
   render() {
-    const {
-      teachers,
-      degrees,
-      classes,
-      students,
-      matters,
-      teachersSimple,
-    } = this.props;
-    const { modalStudents, modalTeachers, degreeName } = this.state;
+    const { degrees, classes, students, matters, teachersSimple } = this.props;
+    const { teachers, modalStudents, modalTeachers, degreeName } = this.state;
     return (
       <Layout>
         <Row className="mt-5">
@@ -162,35 +176,18 @@ class Teachers extends Component {
           </Col>
           <Col md={7}>
             <Row>
-              <Col md={6}>
+              <Col md={{ size: 6, offset: 6 }}>
                 <FormGroup>
                   <Input
                     type="select"
                     name="select"
                     id="exampleSelect"
-                    // onChange={(value) =>
-                    //   this.handleDegreeSearch(value.target.value)
-                    // }
+                    onChange={(value) =>
+                      this.handleDegreeSearch(value.target.value)
+                    }
                   >
                     <option value="">Selecione uma série</option>
                     {degrees.map((item) => (
-                      <option value={item.id}>{item.name}</option>
-                    ))}
-                  </Input>
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                  <Input
-                    type="select"
-                    name="select"
-                    id="exampleSelect"
-                    // onChange={(value) =>
-                    //   this.handleClassSearch(value.target.value)
-                    // }
-                  >
-                    <option>Selecione uma classe</option>
-                    {classes.map((item) => (
                       <option value={item.id}>{item.name}</option>
                     ))}
                   </Input>
